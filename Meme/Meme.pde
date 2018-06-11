@@ -1,14 +1,3 @@
-interface JavaScript {
-  void playSound1();
-  void playSound2();
-  void playSound3();
-  void playSound4();
-}
-void bindJavascript(JavaScript js) {
-  javascript = js;
-}
-JavaScript javascript;
-
 PImage carpeta1, carpeta2, carpeta3, carpeta4, carpeta5, carpeta;
 int ancho1, alto1, ancho2, alto2, ancho3, alto3, ancho4, alto4, ancho5, alto5, cant1, cant2, cant3, cant4, cant5, 
   tiempo1, tiempo2, tiempo3, tiempo4, tiempo5, tiempo6, tiempo7, tiempo8, tiempo9, tiempo10, tiempo11, tiempo12, tiempo13, tiempo14, tiempo15, tiempo16, tiempo17, tiempo18, tiempo19, tiempo20;
@@ -687,9 +676,6 @@ void draw() {
     if (tiempoA == 100) {
       tiempoB++;
       unError = true;
-      if (javascript != null) {
-        javascript.playSound4();
-      }
     }
     if (tiempoB == 50) {
       negro = true;
@@ -819,9 +805,6 @@ void mousePressed() {
       time5 == false && time6 == false && time7 == false && time8 == false &&
       time9 == false && time10 == false && time11 == false && time12 == false &&
       time13 == false && time14 == false && time15 == false && time16 == false) {
-      if (javascript != null) {
-        javascript.playSound3();
-      }
       Feliz = true;
     }
 
@@ -830,9 +813,6 @@ void mousePressed() {
       x == 909 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2 && time9 || x == 909 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2 && time10 || x == 909 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2 && time11 || x == 909 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2 && time12 ||
       x == 909 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2 && time13 || x == 909 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2 && time14 || x == 909 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2 && time15 || x == 909 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2 && time16) {
       errores = true;
-      if (javascript != null) {
-        javascript.playSound1();
-      }
     }
 
     if (x == 450 && mouseX >= 565-ancho2/2 && mouseX <= 565+ancho2/2 && mouseY >= 460-alto2/2 && mouseY <= 460+alto2/2 ||
@@ -840,9 +820,6 @@ void mousePressed() {
       x == 450 && mouseX >= 805-ancho4/2 && mouseX <= 805+ancho4/2 && mouseY >= 465-alto4/2 && mouseY <= 465+alto4/2 ||
       x == 450 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2) {
       cant1++;
-      if (javascript != null) {
-        javascript.playSound2();
-      }
     }
 
 
@@ -895,9 +872,6 @@ void mousePressed() {
       x == 565 && mouseX >= 805-ancho4/2 && mouseX <= 805+ancho4/2 && mouseY >= 465-alto4/2 && mouseY <= 465+alto4/2 ||
       x == 565 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2) {
       cant2++;
-      if (javascript != null) {
-        javascript.playSound2();
-      }
     }
 
     if (x == 565 && mouseX >= 450-ancho1/2 && mouseX <= 450+ancho1/2 && mouseY >= 273-alto1/2 && mouseY <= 273+alto1/2) {
@@ -949,9 +923,6 @@ void mousePressed() {
       x == 683 && mouseX >= 805-ancho4/2 && mouseX <= 805+ancho4/2 && mouseY >= 465-alto4/2 && mouseY <= 465+alto4/2 ||
       x == 683 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2) {
       cant3++;
-      if (javascript != null) {
-        javascript.playSound2();
-      }
     }
 
     if (x == 683 && mouseX >= 450-ancho1/2 && mouseX <= 450+ancho1/2 && mouseY >= 273-alto1/2 && mouseY <= 273+alto1/2) {
@@ -1003,9 +974,6 @@ void mousePressed() {
       x == 805 && mouseX >= 683-ancho3/2 && mouseX <= 683+ancho3/2 && mouseY >= 273-alto3/2 && mouseY <= 273+alto3/2 ||
       x == 805 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2) {
       cant4++;
-      if (javascript != null) {
-        javascript.playSound2();
-      }
     }
 
     if (x == 805 && mouseX >= 450-ancho1/2 && mouseX <= 450+ancho1/2 && mouseY >= 273-alto1/2 && mouseY <= 273+alto1/2) {
@@ -1057,9 +1025,6 @@ void mousePressed() {
       x == 909 && mouseX >= 683-ancho3/2 && mouseX <= 683+ancho3/2 && mouseY >= 273-alto3/2 && mouseY <= 273+alto3/2 ||
       x == 909 && mouseX >= 805-ancho4/2 && mouseX <= 805+ancho4/2 && mouseY >= 465-alto4/2 && mouseY <= 465+alto4/2) {
       cant5++;
-      if (javascript != null) {
-        javascript.playSound2();
-      }
     }
 
     if (x == 909 && mouseX >= 450-ancho1/2 && mouseX <= 450+ancho1/2 && mouseY >= 273-alto1/2 && mouseY <= 273+alto1/2) {
@@ -1163,9 +1128,6 @@ void mousePressed() {
     }
 
     if (x == 450 && mouseX >= 450-ancho1/2 && mouseX <= 450+ancho1/2 && mouseY >= 273-alto1/2 && mouseY <= 273+alto1/2) {
-      if (javascript != null) {
-        javascript.playSound3();
-      }
       x = 565;
       y = 460;
       cant1 = 0;
@@ -1175,9 +1137,6 @@ void mousePressed() {
       monopolio4 = false;
     }
     if (x == 565 && mouseX >= 565-ancho2/2 && mouseX <= 565+ancho2/2 && mouseY >= 460-alto2/2 && mouseY <= 460+alto2/2) {
-      if (javascript != null) {
-        javascript.playSound3();
-      }
       x = 683;
       y = 273;
       cant2 = 0;
@@ -1187,9 +1146,6 @@ void mousePressed() {
       monopolio4 = false;
     }
     if (x == 683 && mouseX >= 683-ancho3/2 && mouseX <= 683+ancho3/2 && mouseY >= 273-alto3/2 && mouseY <= 273+alto3/2) {
-      if (javascript != null) {
-        javascript.playSound3();
-      }
       x = 805;
       y = 465;
       cant3 = 0;
@@ -1199,9 +1155,6 @@ void mousePressed() {
       monopolio4 = false;
     }
     if (x == 805 && mouseX >= 805-ancho4/2 && mouseX <= 805+ancho4/2 && mouseY >= 465-alto4/2 && mouseY <= 465+alto4/2) {
-      if (javascript != null) {
-        javascript.playSound3();
-      }
       x = 909;
       y = 273;
       cant4 = 0;

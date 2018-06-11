@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meme Verón</title>
+  <meta charset="utf-8">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="css/mi.css" media="screen" title="no title">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript" src="js/buzz.min.js"></script>
+  <script src="processing-js/processing.js"></script>
+  <script type="text/javascript" src="processing-js/processing.min.js"></script>
+
+  <script type="text/javascript">
+  var mal1 = new buzz.sound("sonidos/error xp", {formats: [ "ogg", "mp3" ]});
+  var mal2 = new buzz.sound("sonidos/error 98", {formats: [ "ogg", "mp3" ]});
+  var bien = new buzz.sound("sonidos/inicio 3.1", {formats: [ "ogg", "mp3" ]});
+  var death = new buzz.sound("sonidos/death", {formats: [ "ogg", "mp3" ]});
+
+  var bound = false;
+  function bindJavascript() {
+    var pjs = Processing.getInstanceById('Meme');
+    if(pjs!=null) {
+      pjs.bindJavascript(this);
+      bound = true;
+    }
+      if(!bound) setTimeout(bindJavascript, 250);
+    }
+    bindJavascript();
+    function playSound1() {
+      mal1.load();
+      mal1.play();
+    }
+    function playSound2() {
+      mal2.load();
+      mal2.play();
+    }
+    function playSound3() {
+      bien.load();
+      bien.play();
+      bien.stop();
+    }
+    function playSound4() {
+      death.load();
+      death.play();
+    }
+
+  </script>
+
+</head>
+<body>
+
+  <div class="contenedor">
+    <p style="font-size: 50px;"> TP3 - Meme interactivo </p>
+    <p style="font-size: 20px;"> Tiene dos finales :) </p>
+
+    <div style="padding-top: 100px; padding-bottom: 200px;">
+    <canvas id="Meme" data-processing-sources="Meme/Meme.pde"></canvas>
+    </div>
+
+    <footer class="footer">
+      <div class="row pie">
+        <div class="col s12">
+          <h6>Lenguaje Multimedial 2 - FBA - UNLP / 2018
+            <br>TP3 / Profesor: Mannezik / Grupo: Nombre aleatorio online
+          </h6>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <script type="text/javascript">
+  // Inicializa CARROUSEL
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+  // Inicializa COLLAPSIBLE
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+
+  </script>
+</body>
+</html>

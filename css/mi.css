@@ -1,13 +1,7 @@
 body {background-color: gray;}
 .contenedor {
-  background-color: white;
+  background-color: black;
   padding: 10px;
   width: 1366;
-  text-align: center;
-  font-size: 500;
-}
-
-.anchopjs {
-  background-color: white;
   text-align: center;
 }

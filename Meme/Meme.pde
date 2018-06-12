@@ -21,7 +21,6 @@ interface JavaScript {
   void playSound2();
   void playSound3();
   void playSound4();
-  void playSound5();
 }
 void bindJavascript(JavaScript js) {
   javascript = js;
@@ -55,7 +54,7 @@ PImage m1, m2, m3, m4;
 int x1, y1, x2, y2, x3, y3, x4, y4;
 boolean monopolio1, monopolio2, monopolio3, monopolio4;
 
-boolean errores, unError, Feliz, negro, otroError, stop;
+boolean errores, unError, Feliz, negro, otroError;
 int tiempoA, tiempoB, tiempoC, tiempoD;
 PGraphics capa;
 
@@ -821,11 +820,7 @@ void draw() {
     if (tiempoB == 50) {
       negro = true;
     }
-    if (stop) {
-      if (javascript != null) {
-        javascript.playSound5();
-      }
-    }
+
   } else if ( estado.equals( "finalBueno" ) ) {
     image (finalFeliz, width/2, height/2, finalFeliz.width, finalFeliz.height);
 
@@ -938,7 +933,6 @@ void draw() {
     }
 
     if (negro) {
-      stop = true;
       background (0);
     }
   }
@@ -1406,7 +1400,6 @@ void mousePressed() {
 
   if ( estado.equals( "finalMalo" ) || estado.equals( "finalBueno" ) ) {
     if (negro || f == 41) {
-      stop = false;
       carpeta = error;
       Feliz = false;
       negro = false;

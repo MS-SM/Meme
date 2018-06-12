@@ -21,6 +21,7 @@ interface JavaScript {
   void playSound2();
   void playSound3();
   void playSound4();
+  void playSound5();
 }
 void bindJavascript(JavaScript js) {
   javascript = js;
@@ -818,6 +819,9 @@ void draw() {
       unError = true;
     }
     if (tiempoB == 50) {
+      if (javascript != null) {
+        javascript.playSound5();
+      }
       negro = true;
     }
   } else if ( estado.equals( "finalBueno" ) ) {

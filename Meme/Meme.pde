@@ -1449,7 +1449,7 @@ void mousePressed() {
       tiempo18 = 0;
       tiempo19 = 0;
       tiempo20 = 0;
-      time1 = false;
+      time1 = true;
       time2 = false;
       time3 = false;
       time4 = false;

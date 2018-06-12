@@ -965,7 +965,6 @@ void mousePressed() {
       if (javascript != null) {
         javascript.playSound2();
       }
-      otroError = true;
     }
 
 
@@ -1006,10 +1005,13 @@ void mousePressed() {
     if (cant1 == 1) {
       time1 = true;
     } else if (cant1 == 2) {
+      otroError = true;
       time2 = true;
     } else if (cant1 == 3) {
+      otroError = true;
       time3 = true;
     } else if (cant1 == 4) {
+      otroError = true;
       time4 = true;
     }
 
@@ -1060,10 +1062,13 @@ void mousePressed() {
     if (cant2 == 1) {
       time5 = true;
     } else if (cant2 == 2) {
+      otroError = true;
       time6 = true;
     } else if (cant2 == 3) {
+      otroError = true;
       time7 = true;
     } else if (cant2 == 4) {
+      otroError = true;
       time8 = true;
     }
 
@@ -1114,10 +1119,13 @@ void mousePressed() {
     if (cant3 == 1) {
       time9 = true;
     } else if (cant3 == 2) {
+      otroError = true;
       time10 = true;
     } else if (cant3 == 3) {
+      otroError = true;
       time11 = true;
     } else if (cant3 == 4) {
+      otroError = true;
       time12 = true;
     }
 
@@ -1168,10 +1176,13 @@ void mousePressed() {
     if (cant4 == 1) {
       time13 = true;
     } else if (cant4 == 2) {
+      otroError = true;
       time14 = true;
     } else if (cant4 == 3) {
+      otroError = true;
       time15 = true;
     } else if (cant4 == 4) {
+      otroError = true;
       time16 = true;
     }
 
@@ -1222,15 +1233,19 @@ void mousePressed() {
     if (cant5 == 1) {
       time17 = true;
     } else if (cant5 == 2) {
+      otroError = true;
       time18 = true;
     } else if (cant5 == 3) {
+      otroError = true;
       time19 = true;
     } else if (cant5 == 4) {
+      otroError = true;
       time20 = true;
     }
 
     if (carpeta == carpeta1) {
       if (x == 450 && mouseX >= 436 && mouseX <= 910 && mouseY >= 160 && mouseY <= 604) {
+        otroError = true;
         time1 = false;
         cant1 = 5;
         x = 565;
@@ -1243,6 +1258,7 @@ void mousePressed() {
     }
     if (carpeta == carpeta2) {
       if (x == 565 && mouseX >= 436 && mouseX <= 910 && mouseY >= 160 && mouseY <= 604) {
+        otroError = true;
         cant2 = 5;
         x = 683;
         y = 273;
@@ -1254,6 +1270,7 @@ void mousePressed() {
     }
     if (carpeta == carpeta3) {
       if (x == 683 && mouseX >= 436 && mouseX <= 910 && mouseY >= 160 && mouseY <= 604) {
+        otroError = true;
         cant3 = 5;
         x = 805;
         y = 465;
@@ -1265,6 +1282,7 @@ void mousePressed() {
     }
     if (carpeta == carpeta4) {
       if (x == 805 && mouseX >= 436 && mouseX <= 910 && mouseY >= 160 && mouseY <= 604) {
+        otroError = true;
         cant4 = 5;
         x = 909;
         y = 273;
@@ -1276,6 +1294,7 @@ void mousePressed() {
     }
     if (carpeta == carpeta5) {
       if (x == 909 && mouseX >= 436 && mouseX <= 910 && mouseY >= 160 && mouseY <= 604) {
+        otroError = true;
         cant5 = 5;
         mostrarManito = false;
         errores = true;
@@ -1382,6 +1401,7 @@ void mousePressed() {
       Feliz = false;
       negro = false;
       unError = false;
+      otroError = false;
       errores = false;
       mostrarManito = true;
       exploto1 = false;

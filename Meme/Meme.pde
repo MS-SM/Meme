@@ -1,3 +1,32 @@
+interface JavaScript {
+  void playSound1a();
+  void playSound1b();
+  void playSound1c();
+  void playSound1d();
+  void playSound1e();
+  void playSound1f();
+  void playSound1g();
+  void playSound1h();
+  void playSound1i();
+  void playSound1j();
+  void playSound1k();
+  void playSound1l();
+  void playSound1m();
+  void playSound1n();
+  void playSound1o();
+  void playSound1p();
+  void playSound1q();
+  void playSound1r();
+  void playSound1s();
+  void playSound2();
+  void playSound3();
+  void playSound4();
+}
+void bindJavascript(JavaScript js) {
+  javascript = js;
+}
+JavaScript javascript;
+
 PImage carpeta1, carpeta2, carpeta3, carpeta4, carpeta5, carpeta;
 int ancho1, alto1, ancho2, alto2, ancho3, alto3, ancho4, alto4, ancho5, alto5, cant1, cant2, cant3, cant4, cant5, 
   tiempo1, tiempo2, tiempo3, tiempo4, tiempo5, tiempo6, tiempo7, tiempo8, tiempo9, tiempo10, tiempo11, tiempo12, tiempo13, tiempo14, tiempo15, tiempo16, tiempo17, tiempo18, tiempo19, tiempo20;
@@ -25,7 +54,7 @@ PImage m1, m2, m3, m4;
 int x1, y1, x2, y2, x3, y3, x4, y4;
 boolean monopolio1, monopolio2, monopolio3, monopolio4;
 
-boolean errores, unError, Feliz, negro;
+boolean errores, unError, Feliz, negro, otroError;
 int tiempoA, tiempoB, tiempoC, tiempoD;
 PGraphics capa;
 
@@ -43,6 +72,7 @@ void setup () {
   carpeta3 = loadImage("imagenes/carpeta3.png");
   carpeta4 = loadImage("imagenes/carpeta4.png");
   carpeta5 = loadImage("imagenes/carpeta5.png");
+  time1= true;
 
   fondo = loadImage("imagenes/escritorio1.png");
   manito = loadImage("imagenes/hand.png");
@@ -216,6 +246,8 @@ void draw() {
       if (tiempo1 == 80) {
         tiempo1 = 0;
       }
+    } else {
+      naranja1 = false;
     }
 
     if (time2) {
@@ -302,6 +334,8 @@ void draw() {
       if (tiempo5 == 80) {
         tiempo5 = 0;
       }
+    } else {
+      naranja2 = false;
     }
 
     if (time6) {
@@ -388,6 +422,8 @@ void draw() {
       if (tiempo9 == 80) {
         tiempo9 = 0;
       }
+    } else {
+      naranja3 = false;
     }
 
     if (time10) {
@@ -474,6 +510,8 @@ void draw() {
       if (tiempo13 == 80) {
         tiempo13 = 0;
       }
+    } else {
+      naranja4 = false;
     }
 
     if (time14) {
@@ -559,6 +597,8 @@ void draw() {
       if (tiempo17 == 80) {
         tiempo17 = 0;
       }
+    } else {
+      naranja5 = false;
     }
 
     if (time18) {
@@ -673,7 +713,106 @@ void draw() {
     if (tiempoA < 100) {
       tiempoA++;
     }
+
+    if (tiempoA == 1) {
+      if (javascript != null) {
+        javascript.playSound1a();
+      }
+    }
+    if (tiempoA == 6) {
+      if (javascript != null) {
+        javascript.playSound1b();
+      }
+    }
+    if (tiempoA == 11) {
+      if (javascript != null) {
+        javascript.playSound1c();
+      }
+    }
+    if (tiempoA == 16) {
+      if (javascript != null) {
+        javascript.playSound1d();
+      }
+    }
+    if (tiempoA == 21) {
+      if (javascript != null) {
+        javascript.playSound1e();
+      }
+    }
+    if (tiempoA == 26) {
+      if (javascript != null) {
+        javascript.playSound1f();
+      }
+    }
+    if (tiempoA == 31) {
+      if (javascript != null) {
+        javascript.playSound1g();
+      }
+    }
+    if (tiempoA == 36) {
+      if (javascript != null) {
+        javascript.playSound1h();
+      }
+    }
+    if (tiempoA == 41) {
+      if (javascript != null) {
+        javascript.playSound1i();
+      }
+    }
+    if (tiempoA == 46) {
+      if (javascript != null) {
+        javascript.playSound1j();
+      }
+    }
+    if (tiempoA == 51) {
+      if (javascript != null) {
+        javascript.playSound1k();
+      }
+    }
+    if (tiempoA == 56) {
+      if (javascript != null) {
+        javascript.playSound1l();
+      }
+    }
+    if (tiempoA == 61) {
+      if (javascript != null) {
+        javascript.playSound1m();
+      }
+    }
+    if (tiempoA == 66) {
+      if (javascript != null) {
+        javascript.playSound1n();
+      }
+    }
+    if (tiempoA == 71) {
+      if (javascript != null) {
+        javascript.playSound1o();
+      }
+    }
+    if (tiempoA == 76) {
+      if (javascript != null) {
+        javascript.playSound1p();
+      }
+    }
+    if (tiempoA == 81) {
+      if (javascript != null) {
+        javascript.playSound1q();
+      }
+    }
+    if (tiempoA == 86) {
+      if (javascript != null) {
+        javascript.playSound1r();
+      }
+    }
+    if (tiempoA == 91) {
+      if (javascript != null) {
+        javascript.playSound1s();
+      }
+    }
     if (tiempoA == 100) {
+      if (javascript != null) {
+        javascript.playSound4();
+      }
       tiempoB++;
       unError = true;
     }
@@ -805,6 +944,9 @@ void mousePressed() {
       time5 == false && time6 == false && time7 == false && time8 == false &&
       time9 == false && time10 == false && time11 == false && time12 == false &&
       time13 == false && time14 == false && time15 == false && time16 == false) {
+      if (javascript != null) {
+        javascript.playSound3();
+      }
       Feliz = true;
     }
 
@@ -820,6 +962,10 @@ void mousePressed() {
       x == 450 && mouseX >= 805-ancho4/2 && mouseX <= 805+ancho4/2 && mouseY >= 465-alto4/2 && mouseY <= 465+alto4/2 ||
       x == 450 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2) {
       cant1++;
+      if (javascript != null) {
+        javascript.playSound2();
+      }
+      otroError = true;
     }
 
 
@@ -872,6 +1018,9 @@ void mousePressed() {
       x == 565 && mouseX >= 805-ancho4/2 && mouseX <= 805+ancho4/2 && mouseY >= 465-alto4/2 && mouseY <= 465+alto4/2 ||
       x == 565 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2) {
       cant2++;
+      if (javascript != null) {
+        javascript.playSound2();
+      }
     }
 
     if (x == 565 && mouseX >= 450-ancho1/2 && mouseX <= 450+ancho1/2 && mouseY >= 273-alto1/2 && mouseY <= 273+alto1/2) {
@@ -923,6 +1072,9 @@ void mousePressed() {
       x == 683 && mouseX >= 805-ancho4/2 && mouseX <= 805+ancho4/2 && mouseY >= 465-alto4/2 && mouseY <= 465+alto4/2 ||
       x == 683 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2) {
       cant3++;
+      if (javascript != null) {
+        javascript.playSound2();
+      }
     }
 
     if (x == 683 && mouseX >= 450-ancho1/2 && mouseX <= 450+ancho1/2 && mouseY >= 273-alto1/2 && mouseY <= 273+alto1/2) {
@@ -974,6 +1126,9 @@ void mousePressed() {
       x == 805 && mouseX >= 683-ancho3/2 && mouseX <= 683+ancho3/2 && mouseY >= 273-alto3/2 && mouseY <= 273+alto3/2 ||
       x == 805 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2) {
       cant4++;
+      if (javascript != null) {
+        javascript.playSound2();
+      }
     }
 
     if (x == 805 && mouseX >= 450-ancho1/2 && mouseX <= 450+ancho1/2 && mouseY >= 273-alto1/2 && mouseY <= 273+alto1/2) {
@@ -1025,6 +1180,9 @@ void mousePressed() {
       x == 909 && mouseX >= 683-ancho3/2 && mouseX <= 683+ancho3/2 && mouseY >= 273-alto3/2 && mouseY <= 273+alto3/2 ||
       x == 909 && mouseX >= 805-ancho4/2 && mouseX <= 805+ancho4/2 && mouseY >= 465-alto4/2 && mouseY <= 465+alto4/2) {
       cant5++;
+      if (javascript != null) {
+        javascript.playSound2();
+      }
     }
 
     if (x == 909 && mouseX >= 450-ancho1/2 && mouseX <= 450+ancho1/2 && mouseY >= 273-alto1/2 && mouseY <= 273+alto1/2) {
@@ -1073,6 +1231,7 @@ void mousePressed() {
 
     if (carpeta == carpeta1) {
       if (x == 450 && mouseX >= 436 && mouseX <= 910 && mouseY >= 160 && mouseY <= 604) {
+        time1 = false;
         cant1 = 5;
         x = 565;
         y = 460;
@@ -1128,6 +1287,17 @@ void mousePressed() {
     }
 
     if (x == 450 && mouseX >= 450-ancho1/2 && mouseX <= 450+ancho1/2 && mouseY >= 273-alto1/2 && mouseY <= 273+alto1/2) {
+      time1 = false;
+      time5 = true;
+      if (otroError) {
+        if (javascript != null) {
+          javascript.playSound2();
+        }
+      } else {
+        if (javascript != null) {
+          javascript.playSound3();
+        }
+      }
       x = 565;
       y = 460;
       cant1 = 0;
@@ -1137,6 +1307,17 @@ void mousePressed() {
       monopolio4 = false;
     }
     if (x == 565 && mouseX >= 565-ancho2/2 && mouseX <= 565+ancho2/2 && mouseY >= 460-alto2/2 && mouseY <= 460+alto2/2) {
+      time5 = false;
+      time9 = true;
+      if (otroError) {
+        if (javascript != null) {
+          javascript.playSound2();
+        }
+      } else {
+        if (javascript != null) {
+          javascript.playSound3();
+        }
+      }
       x = 683;
       y = 273;
       cant2 = 0;
@@ -1146,6 +1327,17 @@ void mousePressed() {
       monopolio4 = false;
     }
     if (x == 683 && mouseX >= 683-ancho3/2 && mouseX <= 683+ancho3/2 && mouseY >= 273-alto3/2 && mouseY <= 273+alto3/2) {
+      time9 = false;
+      time13 = true;
+      if (otroError) {
+        if (javascript != null) {
+          javascript.playSound2();
+        }
+      } else {
+        if (javascript != null) {
+          javascript.playSound3();
+        }
+      }
       x = 805;
       y = 465;
       cant3 = 0;
@@ -1155,6 +1347,17 @@ void mousePressed() {
       monopolio4 = false;
     }
     if (x == 805 && mouseX >= 805-ancho4/2 && mouseX <= 805+ancho4/2 && mouseY >= 465-alto4/2 && mouseY <= 465+alto4/2) {
+      time13 = false;
+      time17 = true;
+      if (otroError) {
+        if (javascript != null) {
+          javascript.playSound2();
+        }
+      } else {
+        if (javascript != null) {
+          javascript.playSound3();
+        }
+      }
       x = 909;
       y = 273;
       cant4 = 0;
@@ -1164,6 +1367,7 @@ void mousePressed() {
       monopolio4 = false;
     }
     if (x == 909 && mouseX >= 909-ancho5/2 && mouseX <= 909+ancho5/2 && mouseY >= 273-alto5/2 && mouseY <= 273+alto5/2) {
+      time17 = false;
       mostrarManito = false;
       cant5 = 0;
       monopolio1 = false;

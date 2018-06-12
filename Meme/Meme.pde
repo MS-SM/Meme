@@ -820,7 +820,6 @@ void draw() {
     }
     if (tiempoB == 50) {
       negro = true;
-      stop = true;
     }
     if (stop) {
       if (javascript != null) {
@@ -939,6 +938,7 @@ void draw() {
     }
 
     if (negro) {
+      stop = true;
       background (0);
     }
   }

@@ -67,6 +67,7 @@ void setup () {
 
   capa = createGraphics(width, height);
 
+  carpeta = error;
   carpeta1 = loadImage("imagenes/carpeta1.png");
   carpeta2 = loadImage("imagenes/carpeta2.png");
   carpeta3 = loadImage("imagenes/carpeta3.png");
@@ -1398,12 +1399,14 @@ void mousePressed() {
 
   if ( estado.equals( "finalMalo" ) || estado.equals( "finalBueno" ) ) {
     if (negro || f == 41) {
+      carpeta = error;
       Feliz = false;
       negro = false;
       unError = false;
       otroError = false;
       errores = false;
       mostrarManito = true;
+      mostrarCarpeta = false;
       exploto1 = false;
       exploto2 = false;
       e = 0;
